@@ -1,4 +1,3 @@
-/* ====== ОСНОВНОЙ СТИЛЬ ====== */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -120,7 +119,6 @@ nav ul li a:hover {
   padding: 60px 20px;
 }
 
-/* ====== КОМПАКТНАЯ ФОРМА ЗАЯВКИ ====== */
 #application-form {
   position: fixed;
   bottom: 20px;
@@ -173,7 +171,6 @@ nav ul li a:hover {
   font-weight: bold;
 }
 
-/* ====== УВЕДОМЛЕНИЕ ====== */
 #notification {
   position: fixed;
   bottom: 100px;
@@ -194,7 +191,6 @@ nav ul li a:hover {
   transform: translateY(0);
 }
 
-/* ====== МОДАЛЬНОЕ ОКНО ====== */
 .modal {
   display: none;
   opacity: 0;
@@ -252,7 +248,17 @@ nav ul li a:hover {
   color: #333;
 }
 
-/* ====== АДАПТАЦИЯ ДЛЯ МОБИЛОК ====== */
+/* ВИЗУАЛЬНЫЕ РАМКИ ДЛЯ РАЗДЕЛОВ */
+.info-section {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* АДАПТАЦИЯ */
 @media (max-width: 768px) {
   header {
     padding: 6px 0;
@@ -265,8 +271,10 @@ nav ul li a:hover {
   }
 
   nav ul {
-    flex-direction: column;
-    gap: 8px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
     margin-top: 8px;
   }
 
@@ -275,7 +283,6 @@ nav ul li a:hover {
   }
 
   .fixed-buttons {
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 6px;
