@@ -197,6 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Таймер
+  ocalStorage.removeItem("countdownDeadline");
   const deadline = localStorage.getItem("countdownDeadline") || (() => {
     const future = new Date();
     future.setHours(future.getHours() + 24);
