@@ -196,32 +196,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
 
-  // Таймер
-  ocalStorage.removeItem("countdownDeadline");
-  const deadline = localStorage.getItem("countdownDeadline") || (() => {
-    const future = new Date();
-    future.setHours(future.getHours() + 24);
-    const deadlineStr = future.toISOString();
-    localStorage.setItem("countdownDeadline", deadlineStr);
-    return deadlineStr;
-  })();
-  const timerEl = document.getElementById("countdown-timer");
-  function updateCountdown() {
-    const now = new Date();
-    const target = new Date(deadline);
-    const diff = target - now;
-    if (diff <= 0) {
-      timerEl.textContent = "00:00:00";
-      return;
-    }
-    const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const m = Math.floor((diff / (1000 * 60)) % 60);
-    const s = Math.floor((diff / 1000) % 60);
-    const pad = (n) => n.toString().padStart(2, "0");
-    timerEl.textContent = `${pad(h)}:${pad(m)}:${pad(s)}`;
-  }
-  setInterval(updateCountdown, 1000);
-  updateCountdown();
 
   // Отправка формы
   const form = document.getElementById("contact-form");
