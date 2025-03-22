@@ -1,6 +1,10 @@
 // Полный JavaScript с локализацией, таймером и отправкой формы
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Удаляем якорь из URL при загрузке
+  if (window.location.hash) {
+    history.replaceState(null, null, window.location.pathname);
+  }
   const translations = {
     ru: {
       title: "Получение румынское гражданства",
