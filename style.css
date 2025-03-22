@@ -259,23 +259,24 @@ nav ul li a:hover {
 }
 
 /* АДАПТАЦИЯ */
+/* (оставлен без изменений основной код) */
+
 @media (max-width: 768px) {
   header {
-    padding: 6px 0;
+    padding: 8px 0;
   }
 
   h1 {
     font-size: 1.2rem;
     text-align: center;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
   }
 
   nav ul {
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 8px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
 
   nav ul li a {
@@ -285,11 +286,20 @@ nav ul li a:hover {
   .fixed-buttons {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 6px;
+    gap: 8px;
+    margin-top: 10px;
   }
 
   #lang-switcher {
     margin-top: 6px;
+    width: 100%;
+    max-width: 150px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   #map-section {
@@ -307,13 +317,32 @@ nav ul li a:hover {
     max-width: 100%;
     height: auto;
   }
-}
 
-@media (max-width: 480px) {
+  .info-section {
+    padding: 15px;
+    margin: 10px;
+  }
+
   #application-form {
-    width: 90%;
-    right: 5%;
-    bottom: 10px;
+    width: 92%;
+    right: 4%;
+    bottom: 12px;
+    font-size: 13px;
+    padding: 12px;
+  }
+
+  #application-form h3 {
+    font-size: 1rem;
+  }
+
+  #application-form input,
+  #application-form button {
+    font-size: 13px;
+    padding: 7px;
+  }
+
+  #countdown-timer {
+    font-size: 15px;
   }
 
   #notification {
